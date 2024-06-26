@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el reproductor */
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.video-wrapper video::-webkit-media-controls-panel {
+    display: flex !important; /* Muestra los controles principales en Chrome y Safari */
+    justify-content: space-between; /* Alinea los controles de manera horizontal */
+    align-items: center; /* Centra verticalmente los controles */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los controles */
+    padding: 5px; /* Espaciado interno para los controles */
+    border-radius: 0 0 8px 8px; /* Esquinas redondeadas solo abajo */
+}
+
+.video-wrapper video::-webkit-media-controls {
+    display: flex !important; /* Muestra los controles principales en Chrome y Safari */
+    flex-grow: 1; /* Asegura que los controles se expandan para ocupar todo el espacio disponible */
+}
+
+.video-wrapper video::-webkit-media-controls-play-button,
+.video-wrapper video::-webkit-media-controls-volume-slider,
+.video-wrapper video::-webkit-media-controls-mute-button,
+.video-wrapper video::-webkit-media-controls-timeline,
+.video-wrapper video::-webkit-media-controls-fullscreen-button {
+    display: block !important; /* Muestra todos los controles individuales */
+}
+
+.video-wrapper video::-moz-range-progress {
+    background-color: red !important; /* Color rojo para la línea de reproducción en Firefox */
+}
+
+.video-wrapper video::-moz-range-thumb {
+    background-color: red !important; /* Color rojo para el control deslizante en Firefox */
+}
+
+.video-wrapper video::-moz-focus-inner {
+    border: none !important; /* Elimina el borde en Firefox */
+}
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+.content ul li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.botones button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.botones button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #d3d3d3; /* Color gris claro */
+    text-align: center;
+    padding: 15px;
+    border-radius: 0 0 8px 8px; /* Esquinas redondeadas en la parte inferior */
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
